@@ -3,11 +3,8 @@
 #include <stdio.h>
 /**
  * main - main block
- *
- * Description: The program generates a random number for each time it's executed  
- * and the task is to print the last digit of the random number.
- *
- * Return: Always 0 (success)
+ * Description: Print statements based on the last digit of the random number.
+ * Return: 0
  */
 int main(void)
 {
