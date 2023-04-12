@@ -8,26 +8,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1;
-	int len = 0;
+	int i, count = 0;
+	unsigned long int current;
 
-	while (mask <= n)
+	for (i = 63; i >= 0; i--)
 	{
-		len++;
-		mask <<= 1;
-	}
-	mask >>= 1;
+		current = n >> i;
 
-	while (mask)
-	{
-		if (n & mask)
+		if (current & 1)
+		{
 			_putchar('1');
-		else
+			count++;
+		}
+		else if (count)
 			_putchar('0');
-
-		mask >>= 1;
 	}
-
-	if (len == 0)
+	if (!count)
 		_putchar('0');
 }
